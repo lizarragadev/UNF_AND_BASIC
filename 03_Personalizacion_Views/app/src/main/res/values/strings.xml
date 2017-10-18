@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Aplicacion 3</string>
+    <string name="abajo">
+        <u>Politicas y privacidad</u> y <u>Terminos y condiciones</u>
+    </string>
+</resources>

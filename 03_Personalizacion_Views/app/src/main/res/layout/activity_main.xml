@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:alpha="0.7">
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvBienvenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡...Bienvenido...!"
+                android:textColor="#FFF"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tvSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We hope you enjoy\n the stay!"
+                android:layout_below="@+id/tvBienvenido"
+                android:textColor="#fff"
+                android:textSize="35sp"
+                android:gravity="center_horizontal"/>
+            <View
+                android:id="@+id/view"
+                android:layout_width="80dp"
+                android:layout_height="5dp"
+                android:background="#fff"
+                android:layout_below="@id/tvSubtitulo"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:layout_below="@id/view"
+                android:textColor="#fff"
+                android:textSize="35sp"
+                android:gravity="center_horizontal"/>
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre completo"
+                android:layout_below="@+id/tvLogin"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:inputType="textCapWords"/>
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electronico"
+                android:layout_below="@+id/etNombre"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:inputType="textEmailAddress"/>
+            <EditText
+                android:id="@+id/etNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero celular"
+                android:layout_below="@+id/etCorreo"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:backgroundTint="#fff"
+                android:inputType="number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:layout_below="@+id/etNumero"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/fondo_boton"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"/>
+
+            <TextView
+                android:id="@+id/politicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/abajo"
+                android:textColor="#fff"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lea los terminos y condiciones de la aplicacion movil"
+                android:textColor="#fff"
+                android:gravity="center_horizontal"
+                android:layout_above="@+id/politicas"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
