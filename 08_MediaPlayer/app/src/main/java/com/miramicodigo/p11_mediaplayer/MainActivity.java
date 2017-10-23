@@ -35,27 +35,58 @@ public class MainActivity extends AppCompatActivity {
         btnStop = (Button) findViewById(R.id.btnStop);
         ivAlpha = (ImageView) findViewById(R.id.ivAlpha);
 
+        animacion = AnimationUtils.loadAnimation(this, R.anim.blink);
+
         initUI();
         initMediaPlayer();
     }
 
     public void initUI() {
-
+        btnPlay.setEnabled(true);
+        btnPause.setEnabled(false);
+        btnStop.setEnabled(false);
     }
 
     public void initMediaPlayer() {
-
+        mediaPlayer = MediaPlayer.create(this, R.raw.acdc);
     }
 
     public void play(View view) {
-
+        try {
+            mediaPlayer.start();
+            ivAlpha.startAnimation(animacion);
+            btnPlay.setEnabled(false);
+            btnPause.setEnabled(true);
+            btnStop.setEnabled(true);
+        } catch (Exception e) {
+            System.out.println("Hubo un error en: "+e.getMessage());
+        }
     }
 
     public void pause(View view) {
-
+        try {
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+                ivAlpha.clearAnimation();
+                btnPlay.setEnabled(true);
+                btnStop.setEnabled(false);
+            }
+        } catch (Exception e) {
+            System.out.println("Hubo un error en: "+e.getMessage());
+        }
     }
 
     public void stop(View view) {
-
+        try{
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                ivAlpha.clearAnimation();
+                initMediaPlayer();
+                initUI();
+            }
+        } catch(Exception e) {
+            System.out.println("Hubo un error en: "+e.getMessage());
+        }
     }
 }

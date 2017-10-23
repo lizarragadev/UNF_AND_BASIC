@@ -47,6 +47,7 @@
                 android:textAllCaps="false"
                 android:onClick="conElJorge"
                 android:background="@drawable/btn_voz"/>
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

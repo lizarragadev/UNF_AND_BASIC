@@ -381,7 +381,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void reyeto(View view) {
         if (resReyeto != 0){
-            spReyeto.play(resReyeto, 1, 1, 0, 0, 1);
+            spReyeto.play(resReyeto, 1, 1, 0, -1, 1);
         }
     }
 
