@@ -92,17 +92,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void guardarPreferences() {
+        String valor1 = etPreferencesUno.getText().toString().trim();
+        String valor2 = etPreferencesDos.getText().toString().trim();
 
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("v1", valor1);
+        editor.putString("v2", valor2);
+
+        editor.commit();
+
+        etPreferencesUno.setText("");
+        etPreferencesDos.setText("");
+
+        Toast.makeText(
+                this,
+                "Se guardo correctamente",
+                Toast.LENGTH_LONG).show();
     }
 
     public void leerPreferences() {
-
+        String valor1 = sharedPreferences.getString("v1", "");
+        String valor2 = sharedPreferences.getString("v2", "");
+        etPreferencesUno.setText(valor1);
+        etPreferencesDos.setText(valor2);
     }
 ;
     public void guardarInterno() {
         if (!etInterno.getText().toString().equals("")) {
             try {
-
+                OutputStreamWriter output = new OutputStreamWriter(
+                        openFileOutput(nombreArchivoInterno, Context.MODE_PRIVATE)
+                );
+                output.write(etInterno.getText().toString().trim());
+                output.close();
+                etInterno.setText("");
+                Toast.makeText(this, "Se guardo el archivo",
+                        Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 System.out.println("Error: "+e.getMessage());
             }
@@ -115,7 +140,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void leerInterno() {
         try {
-
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(openFileInput(nombreArchivoInterno))
+            );
+            String resultado = br.readLine();
+            br.close();
+            etInterno.setText(resultado);
         } catch (Exception e) {
             System.out.println("Error: "+e.getMessage());
         }
@@ -123,7 +153,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void guardarExterno() {
         if (!etExterno.getText().toString().equals("")) {
+            boolean sdDisponible = false;
+            boolean sdAccesoEscritura = false;
+            String state = Environment.getExternalStorageState();
+            if(Environment.MEDIA_MOUNTED.equals(state)) {
+                sdDisponible = true;
+                sdAccesoEscritura = true;
+            }else{
+                if(Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+                    sdDisponible = true;
+                    sdAccesoEscritura = false;
+                }else{
+                    sdDisponible = false;
+                    sdAccesoEscritura = false;
+                }
+            }
+            if(sdDisponible && sdAccesoEscritura) {
+                try {
+                    File dir = new File(
+                            Environment.getExternalStorageDirectory()+"/UNIFRANZ/");
+                    if(!dir.exists()) {
+                        dir.mkdirs();
+                    }
+                    File file = new File(dir, nombreArchivoExterno);
+                    try {
+                        OutputStreamWriter osw = new OutputStreamWriter(
+                                new FileOutputStream(file)
+                        );
+                        osw.write(etExterno.getText().toString().trim());
+                        osw.close();
+                        etExterno.setText("");
+                    }catch (Exception e) {
 
+                    }
+                }catch(Exception e) {
+
+                }
+            } else {
+
+            }
         } else {
             Toast.makeText(getApplicationContext(),
                     "Debe ingresar datos para guardar",
@@ -133,7 +201,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void leerExterno() {
         try {
-
+            File file = Environment.getExternalStorageDirectory();
+            File f = new File(file.getAbsolutePath(), "/UNIFRANZ/"+nombreArchivoExterno);
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(new FileInputStream(f))
+            );
+            String resultado = br.readLine();
+            br.close();
+            etExterno.setText(resultado);
         }catch (Exception e) {
             System.out.println("Error: "+e.getMessage());
         }
