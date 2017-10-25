@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="matterName">
+        <item>@string/matter.list.title.1</item>
+        <item>@string/matter.list.title.2</item>
+        <item>@string/matter.list.title.3</item>
+        <item>@string/matter.list.title.4</item>
+        <item>@string/matter.list.title.5</item>
+        <item>@string/matter.list.title.6</item>
+        <item>@string/matter.list.title.7</item>
+        <item>@string/matter.list.title.8</item>
+        <item>@string/matter.list.title.9</item>
+        <item>@string/matter.list.title.10</item>
+        <item>@string/matter.list.title.11</item>
+        <item>@string/matter.list.title.12</item>
+        <item>@string/matter.list.title.13</item>
+        <item>@string/matter.list.title.14</item>
+        <item>@string/matter.list.title.15</item>
+    </string-array>
+    <string-array name="matterInitial">
+        <item>@string/matter.list.subtitle.1</item>
+        <item>@string/matter.list.subtitle.2</item>
+        <item>@string/matter.list.subtitle.3</item>
+        <item>@string/matter.list.subtitle.4</item>
+        <item>@string/matter.list.subtitle.5</item>
+        <item>@string/matter.list.subtitle.6</item>
+        <item>@string/matter.list.subtitle.7</item>
+        <item>@string/matter.list.subtitle.8</item>
+        <item>@string/matter.list.subtitle.9</item>
+        <item>@string/matter.list.subtitle.10</item>
+        <item>@string/matter.list.subtitle.11</item>
+        <item>@string/matter.list.subtitle.12</item>
+        <item>@string/matter.list.subtitle.13</item>
+        <item>@string/matter.list.subtitle.14</item>
+        <item>@string/matter.list.subtitle.15</item>
+    </string-array>
+    <string-array name="matterType">
+        <item>@string/matter.list.type.1</item>
+        <item>@string/matter.list.type.2</item>
+        <item>@string/matter.list.type.3</item>
+        <item>@string/matter.list.type.4</item>
+        <item>@string/matter.list.type.5</item>
+        <item>@string/matter.list.type.6</item>
+        <item>@string/matter.list.type.7</item>
+        <item>@string/matter.list.type.8</item>
+        <item>@string/matter.list.type.9</item>
+        <item>@string/matter.list.type.10</item>
+        <item>@string/matter.list.type.11</item>
+        <item>@string/matter.list.type.12</item>
+        <item>@string/matter.list.type.13</item>
+        <item>@string/matter.list.type.14</item>
+        <item>@string/matter.list.type.15</item>
+    </string-array>
+
+    <string-array name="teacherFullname">
+        <item>@string/teacher.recycler.title.1</item>
+        <item>@string/teacher.recycler.title.2</item>
+        <item>@string/teacher.recycler.title.3</item>
+        <item>@string/teacher.recycler.title.4</item>
+        <item>@string/teacher.recycler.title.5</item>
+        <item>@string/teacher.recycler.title.6</item>
+        <item>@string/teacher.recycler.title.7</item>
+        <item>@string/teacher.recycler.title.8</item>
+        <item>@string/teacher.recycler.title.9</item>
+        <item>@string/teacher.recycler.title.10</item>
+        <item>@string/teacher.recycler.title.11</item>
+        <item>@string/teacher.recycler.title.12</item>
+        <item>@string/teacher.recycler.title.13</item>
+        <item>@string/teacher.recycler.title.14</item>
+        <item>@string/teacher.recycler.title.15</item>
+    </string-array>
+
+    <string-array name="teacherCareer">
+        <item>@string/teacher.recycler.subtitle.1</item>
+        <item>@string/teacher.recycler.subtitle.2</item>
+        <item>@string/teacher.recycler.subtitle.3</item>
+        <item>@string/teacher.recycler.subtitle.4</item>
+        <item>@string/teacher.recycler.subtitle.5</item>
+        <item>@string/teacher.recycler.subtitle.6</item>
+        <item>@string/teacher.recycler.subtitle.7</item>
+        <item>@string/teacher.recycler.subtitle.8</item>
+        <item>@string/teacher.recycler.subtitle.9</item>
+        <item>@string/teacher.recycler.subtitle.10</item>
+        <item>@string/teacher.recycler.subtitle.11</item>
+        <item>@string/teacher.recycler.subtitle.12</item>
+        <item>@string/teacher.recycler.subtitle.13</item>
+        <item>@string/teacher.recycler.subtitle.14</item>
+        <item>@string/teacher.recycler.subtitle.15</item>
+    </string-array>
+
+    <string-array name="teacherGender">
+        <item>@string/teacher.recycler.gender.1</item>
+        <item>@string/teacher.recycler.gender.2</item>
+        <item>@string/teacher.recycler.gender.3</item>
+        <item>@string/teacher.recycler.gender.4</item>
+        <item>@string/teacher.recycler.gender.5</item>
+        <item>@string/teacher.recycler.gender.6</item>
+        <item>@string/teacher.recycler.gender.7</item>
+        <item>@string/teacher.recycler.gender.8</item>
+        <item>@string/teacher.recycler.gender.9</item>
+        <item>@string/teacher.recycler.gender.10</item>
+        <item>@string/teacher.recycler.gender.11</item>
+        <item>@string/teacher.recycler.gender.12</item>
+        <item>@string/teacher.recycler.gender.13</item>
+        <item>@string/teacher.recycler.gender.14</item>
+        <item>@string/teacher.recycler.gender.15</item>
+    </string-array>
+
+</resources>
